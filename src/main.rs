@@ -11,7 +11,6 @@ use metrics_exporter_prometheus::{Matcher, PrometheusBuilder, PrometheusHandle};
 use axum_tracing_opentelemetry::opentelemetry_tracing_layer;
 use std::{future::ready, net::SocketAddr, time::Instant};
 use tokio::signal;
-use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 fn metrics_app() -> Router {
     let recorder_handle = setup_metrics_recorder();
@@ -57,6 +56,7 @@ async fn start_main_server() -> Result<(), axum::BoxError> {
 
 #[tokio::main]
 async fn main() -> Result<(), axum::BoxError> {
+    // from the docs, this is a "very opinionated init of tracing, look at source to make your own"
     axum_tracing_opentelemetry::tracing_subscriber_ext::init_subscribers()?;
 
     // not needed since we're using opentelemetry now?
