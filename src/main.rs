@@ -4,7 +4,7 @@ use axum::{
     middleware::{self, Next},
     response::IntoResponse,
     routing::get,
-    Router,
+    BoxError, Router,
 };
 use metrics_exporter_prometheus::{Matcher, PrometheusBuilder, PrometheusHandle};
 

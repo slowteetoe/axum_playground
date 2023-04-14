@@ -454,6 +454,7 @@ dependencies = [
  "metrics-exporter-prometheus",
  "opentelemetry 0.19.0",
  "opentelemetry-otlp",
+ "opentelemetry-proto 0.2.0",
  "reqwest",
  "serde",
  "serde_json",
@@ -943,7 +944,7 @@ dependencies = [
  "http",
  "opentelemetry 0.18.0",
  "opentelemetry-http",
- "opentelemetry-proto",
+ "opentelemetry-proto 0.1.0",
  "prost",
  "reqwest",
  "thiserror",
@@ -963,6 +964,17 @@ dependencies = [
  "prost",
  "tonic",
  "tonic-build",
+]
+
+[[package]]
+name = "opentelemetry-proto"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "045f8eea8c0fa19f7d48e7bc3128a39c2e5c533d5c61298c548dfefc1064474c"
+dependencies = [
+ "futures",
+ "futures-util",
+ "opentelemetry 0.19.0",
 ]
 
 [[package]]
@@ -996,6 +1008,7 @@ version = "0.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ed41783a5bf567688eb38372f2b7a8530f5a607a4b49d38dd7573236c23ca7e2"
 dependencies = [
+ "fnv",
  "futures-channel",
  "futures-util",
  "indexmap",
@@ -1035,6 +1048,8 @@ checksum = "8b3a2a91fdbfdd4d212c0dcc2ab540de2c2bcbbd90be17de7a7daf8822d010c1"
 dependencies = [
  "async-trait",
  "crossbeam-channel",
+ "dashmap",
+ "fnv",
  "futures-channel",
  "futures-executor",
  "futures-util",

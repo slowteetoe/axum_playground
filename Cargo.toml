@@ -18,6 +18,7 @@ metrics = "0.20.1"
 metrics-exporter-prometheus = "0.11.0"
 opentelemetry = { version = "0.19", features = ["rt-tokio"] }
 opentelemetry-otlp = { version = "*", features = ["reqwest-client"] }
+opentelemetry-proto = "0.2.0"
 axum-tracing-opentelemetry = { version = "0.10.0", features = [
     "otlp",
     "tracing_subscriber_ext",
