@@ -1,4 +1,6 @@
 # Axum playground
+![build](https://github.com/slowteetoe/axum_playground/actions/workflows/rust.yml/badge.svg)
+
 
 [Axum](https://github.com/tokio-rs/axum) is an ergonomic and modular web framework in Rust, built with Tokio, [Tower](https://crates.io/crates/tower) and [Hyper](https://crates.io/crates/hyper)
 
